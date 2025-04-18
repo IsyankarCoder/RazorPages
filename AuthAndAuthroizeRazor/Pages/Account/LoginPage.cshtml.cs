@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -37,10 +38,10 @@ namespace AuthAndAuthroizeRazor.Pages.Account
                     new Claim(ClaimTypes.Email,"admin@mywebsite.com")
                 };
 
-                var identity = new ClaimsIdentity(claims,"MyCookieAuth");
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
-                await HttpContext.SignInAsync("MyCookieAuth",claimsPrincipal);
+                await HttpContext.SignInAsync( CookieAuthenticationDefaults.AuthenticationScheme,claimsPrincipal);
                 return RedirectToPage("/Index");
 
              }

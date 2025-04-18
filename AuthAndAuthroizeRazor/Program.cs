@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -5,12 +7,22 @@ internal class Program
         var builder = WebApplication.CreateBuilder(args);
 
 
-        builder.Services.AddAuthentication().AddCookie(options =>
+      
+        // Add services to the container.
+        builder.Services.AddRazorPages();
+          builder.Services.AddAuthentication(cfg=>{
+             cfg.DefaultAuthenticateScheme=CookieAuthenticationDefaults.AuthenticationScheme;
+            cfg.DefaultSignInScheme=CookieAuthenticationDefaults.AuthenticationScheme;
+            cfg.DefaultChallengeScheme=CookieAuthenticationDefaults.AuthenticationScheme;
+          })
+          .AddCookie(options =>
         {
             options.Cookie.Name = "MyCookieAuth";
         });
-        // Add services to the container.
-        builder.Services.AddRazorPages();
+
+        
+
+
 
         var app = builder.Build();
 
@@ -27,6 +39,7 @@ internal class Program
 
         app.UseRouting();
  
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapRazorPages();
