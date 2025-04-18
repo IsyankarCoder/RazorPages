@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AuthAndAuthroizeRazor.props" />
+</Project>
