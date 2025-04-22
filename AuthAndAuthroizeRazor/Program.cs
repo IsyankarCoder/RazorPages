@@ -15,11 +15,21 @@ internal class Program
           .AddCookie("MyCookieAuth",options =>
           {
             options.LoginPath="/account/loginpage";
+            options.AccessDeniedPath="/account/accessdeniedpage";
             options.Cookie.Name = "MyCookieAuth";
           });
 
-        
+        builder.Services.AddAuthorization(options =>{
+               options.AddPolicy("AdminOnly", policy=>policy.RequireClaim("Admin"));
+               
+               options.AddPolicy("MustBelongToHRDepartment",
+               policy=>policy.RequireClaim("Department","HR")); 
 
+               options.AddPolicy("HRManagerOnly", policy=> policy
+                                                                .RequireClaim("Department","HR")
+                                                                .RequireClaim("Manager"));
+
+        });
 
 
         var app = builder.Build();

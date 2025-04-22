@@ -18,12 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Repo\NETCORE\Mvc\RazorPages\AuthAndAuthroizeRazor
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Repo/NETCORE/Mvc/RazorPages/AuthAndAuthroizeRazor/Pages/Account/AccessDeniedPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWRQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Repo/NETCORE/Mvc/RazorPages/AuthAndAuthroizeRazor/Pages/Account/LoginPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpblBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Repo/NETCORE/Mvc/RazorPages/AuthAndAuthroizeRazor/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repo/NETCORE/Mvc/RazorPages/AuthAndAuthroizeRazor/Pages/HRManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repo/NETCORE/Mvc/RazorPages/AuthAndAuthroizeRazor/Pages/HumanResource.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSHVtYW5SZXNvdXJjZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Repo/NETCORE/Mvc/RazorPages/AuthAndAuthroizeRazor/Pages/Index.cshtml]
@@ -36,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Repo/NETCORE/Mvc/RazorPages/AuthAndAuthroizeRazor/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repo/NETCORE/Mvc/RazorPages/AuthAndAuthroizeRazor/Pages/SettingsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0dGluZ3NQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Repo/NETCORE/Mvc/RazorPages/AuthAndAuthroizeRazor/Pages/Shared/_ValidationScriptsPartial.cshtml]
