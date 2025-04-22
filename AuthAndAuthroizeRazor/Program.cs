@@ -10,15 +10,13 @@ internal class Program
       
         // Add services to the container.
         builder.Services.AddRazorPages();
-          builder.Services.AddAuthentication(cfg=>{
-             cfg.DefaultAuthenticateScheme=CookieAuthenticationDefaults.AuthenticationScheme;
-            cfg.DefaultSignInScheme=CookieAuthenticationDefaults.AuthenticationScheme;
-            cfg.DefaultChallengeScheme=CookieAuthenticationDefaults.AuthenticationScheme;
-          })
-          .AddCookie(options =>
-        {
+          builder.Services.AddAuthentication("MyCookieAuth" 
+          )
+          .AddCookie("MyCookieAuth",options =>
+          {
+            options.LoginPath="/account/loginpage";
             options.Cookie.Name = "MyCookieAuth";
-        });
+          });
 
         
 
@@ -39,6 +37,7 @@ internal class Program
 
         app.UseRouting();
  
+        
         app.UseAuthentication();
         app.UseAuthorization();
 

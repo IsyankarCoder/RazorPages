@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthAndAuthroizeRazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d92b762945395e7e57460c716b524ff35bbe08a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6761fc61aa7e46e0b1f3ddb72185870ec18b373b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthAndAuthroizeRazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthAndAuthroizeRazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

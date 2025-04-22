@@ -38,10 +38,10 @@ namespace AuthAndAuthroizeRazor.Pages.Account
                     new Claim(ClaimTypes.Email,"admin@mywebsite.com")
                 };
 
-                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
-                await HttpContext.SignInAsync( CookieAuthenticationDefaults.AuthenticationScheme,claimsPrincipal);
+                await HttpContext.SignInAsync("MyCookieAuth",claimsPrincipal);
                 return RedirectToPage("/Index");
 
              }
