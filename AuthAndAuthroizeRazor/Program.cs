@@ -1,4 +1,6 @@
+using AuthAndAuthroizeRazor.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 
 internal class Program
 {
@@ -27,9 +29,15 @@ internal class Program
 
                options.AddPolicy("HRManagerOnly", policy=> policy
                                                                 .RequireClaim("Department","HR")
-                                                                .RequireClaim("Manager"));
+                                                                .RequireClaim("Manager")
+                                                                .Requirements.Add(new HRManagerProbationRequirement(3))
+                                                                ); 
+                
+
 
         });
+
+        builder.Services.AddSingleton<IAuthorizationHandler,HRManagerProbationRequirementHandler>();
 
 
         var app = builder.Build();
