@@ -45,8 +45,12 @@ namespace AuthAndAuthroizeRazor.Pages.Account
 
                 var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+                
+                var authProperties = new  AuthenticationProperties(){
+                     IsPersistent=Credential.RememberMe
+                };
 
-                await HttpContext.SignInAsync("MyCookieAuth",claimsPrincipal);
+                await HttpContext.SignInAsync("MyCookieAuth",claimsPrincipal,authProperties);
                 return RedirectToPage("/Index");
 
              }
@@ -62,5 +66,8 @@ namespace AuthAndAuthroizeRazor.Pages.Account
         
         [Required]
         public string Username{get;set;}
+       
+        [Display(Name ="Remember Me")]
+        public bool RememberMe{get;set;}
         }
 }

@@ -19,6 +19,7 @@ internal class Program
             options.LoginPath="/account/loginpage";
             options.AccessDeniedPath="/account/accessdeniedpage";
             options.Cookie.Name = "MyCookieAuth";
+            options.ExpireTimeSpan = TimeSpan.FromMinutes(3);
           });
 
         builder.Services.AddAuthorization(options =>{
